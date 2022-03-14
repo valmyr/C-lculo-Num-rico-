@@ -1,0 +1,10 @@
+x = [-5:.01:5];
+f = @(x) 3.*x.^7 -12.*x.^5-4.*x.^4-12.*x.^3-3.*x.^2-12*x-23;
+P = [3 -12 -4 -12 -3 -12 -23];
+plot(x,f(x));
+xlabel("Eixo x");
+ylabel("Eixo y");
+axis([-5 5 -250 250]);
+fprintf("Raízes\n\n");
+r = roots(P);
+fprintf("%.4f\n",r);

@@ -1,0 +1,10 @@
+x = [-5:.01:5];
+f = @(x) x.^5 -22.*x.^2-25*x+15;
+P = [1 -22 -25 12];
+plot(x,f(x));
+xlabel("Eixo x");
+ylabel("Eixo y");
+axis([-5 5 -100 100]);
+fprintf("Raízes\n\n");
+r = roots(P);
+fprintf("%.4f\n",r);
